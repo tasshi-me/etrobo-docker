@@ -8,7 +8,8 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/community/ >> /etc/apk/reposi
 RUN apk add -U --no-cache \
   alpine-sdk perl diffutils tar xz \
   uboot-tools \
-  && apk add -U --no-cache --arch x86 \
+  && echo "x86" > /etc/apk/arch \ 
+  && apk add -U --no-cache \
   libc6-compat 	ncurses-libs libstdc++ \
   && rm -rf /var/cache/apk/*
 
