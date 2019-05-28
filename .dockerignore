@@ -1,0 +1,11 @@
+# common files
+/.git/
+/*.md
+/.vscode/
+
+# docker files
+docker-compose.yml
+docker-compose.yaml
+Dockerfile
+*.Dockerfile
+.dockerignore
