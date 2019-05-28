@@ -15,7 +15,7 @@ RUN apk add -U --no-cache \
 
 RUN wget -O - https://sourceforge.net/projects/boost/files/boost/1.55.0/boost_1_55_0.tar.gz/download | tar xzvf - -C /opt/
 WORKDIR /opt/boost_1_55_0
-RUN bootstrap.sh && ./b2 install -j2
+RUN ash bootstrap.sh && ./b2 install -j2
 
 RUN wget -O - https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q3-update/+download/gcc-arm-none-eabi-5_4-2016q3-20160926-linux.tar.bz2 | tar jxvf - -C /opt/
 ENV PATH $PATH:/opt/gcc-arm-none-eabi-5_4-2016q3/bin
